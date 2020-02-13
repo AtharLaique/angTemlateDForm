@@ -11,6 +11,22 @@ export class AppComponent {
     const suggestedName = 'Superuser';
   }
   onSubmit (form:NgForm){
-    console.log(form)
+    //Difrente form state using ng Form
+
+    //Form controles in our form
+    console.log(form.controls)
+    //Form Values 
+    console.log(form.value)
+    //dirty 
+    console.log(form.dirty) //some thing changed about the form or not
+    //Disabled
+    console.log(form.enabled)  //if Form disabled then its true
+    //invalid
+    console.log(form.invalid) // if we putt some validator on the form then its true
+    //valid
+    console.log(form.valid) //if form valid
+    //touched
+    console.log(form.touched)// click on form or not
+
   }
 }
