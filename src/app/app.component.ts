@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,26 +7,30 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //Using this we can access the form before submit 
+  @ViewChild('f', {static: true}) LoginForm:NgForm;
   suggestUserName() {
     const suggestedName = 'Superuser';
   }
-  onSubmit (form:NgForm){
-    //Difrente form state using ng Form
-
-    //Form controles in our form
-    console.log(form.controls)
-    //Form Values 
-    console.log(form.value)
-    //dirty 
-    console.log(form.dirty) //some thing changed about the form or not
-    //Disabled
-    console.log(form.enabled)  //if Form disabled then its true
-    //invalid
-    console.log(form.invalid) // if we putt some validator on the form then its true
-    //valid
-    console.log(form.valid) //if form valid
-    //touched
-    console.log(form.touched)// click on form or not
-
+  onSubmit()
+  {
+    console.log(this.LoginForm)
   }
+  // onSubmit (form:NgForm){
+  //   //Difrente form state using ng Form
+  //   //Form controles in our form
+  //   console.log(form.controls)
+  //   //Form Values 
+  //   console.log(form.value)
+  //   //dirty 
+  //   console.log(form.dirty) //some thing changed about the form or not
+  //   //Disabled
+  //   console.log(form.enabled)  //if Form disabled then its true
+  //   //invalid
+  //   console.log(form.invalid) // if we putt some validator on the form then its true
+  //   //valid
+  //   console.log(form.valid) //if form valid
+  //   //touched
+  //   console.log(form.touched)// click on form or not
+  // }
 }

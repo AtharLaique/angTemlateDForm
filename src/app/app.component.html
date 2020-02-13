@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <!--(ngSubmit is a directive and onSubmit is a method which on form submit)-->
+      <!--(ngSubmit) is a directive and onSubmit is a method which on form submit-->
       <!--#f is local refrence for ngForm and passed to onSubmit()-->
-      <form (ngSubmit)="onSubmit(f)  " #f='ngForm'>
+      <!-- To Access form using @ViewChild we just give name of the method onSubmit()-->
+      <form (ngSubmit)="onSubmit()  " #f='ngForm'>
         <div id="user-data">
           <div class="form-group">
             <label for="username">Username</label>
