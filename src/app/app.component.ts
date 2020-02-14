@@ -7,6 +7,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //pet is a one option of select dropdown
+  defaultPet="pet"
   //Using this we can access the form before submit 
   @ViewChild('f', {static: true}) LoginForm:NgForm;
   suggestUserName() {
