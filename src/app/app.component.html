@@ -4,8 +4,8 @@
       <!--(ngSubmit) is a directive and onSubmit is a method which on form submit-->
       <!--#f is local refrence for ngForm and passed to onSubmit()-->
       <!-- To Access form using @ViewChild we just give name of the method onSubmit()-->
-      <form (ngSubmit)="onSubmit()  " #f='ngForm'>
-        <div id="user-data">
+      <form (ngSubmit)="onSubmit()  " #f='ngForm'>  
+        <div id="user-data" ngModelGroup="userData">
           <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" class="form-control" name="username" ngModel required>
