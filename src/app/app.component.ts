@@ -20,14 +20,19 @@ export class AppComponent {
     # Its take javascript object exactly representing
     # our form.
     */ 
-   this.LoginForm.setValue({
-     userData:{
-       username:suggestedName,
-       email:''
-     },
-     secret:'pet',
-     gender:'Male'
-   })
+  //  this.LoginForm.setValue({
+  //    userData:{
+  //      username:suggestedName,
+  //      email:''
+  //    },
+  //    secret:'pet',
+  //    gender:'Male'
+  //  })
+   /*
+    # patchValue() set the value of attribute of the form.
+    # Its take javascript object to over write the form value
+    */
+     this.LoginForm.form.patchValue({})
   }
   onSubmit()
   {
