@@ -15,6 +15,12 @@ export class AppComponent {
   @ViewChild('f', {static: true}) LoginForm:NgForm;
   suggestUserName() {
     const suggestedName = 'Superuser';
+    /*
+    # setValue() set the value of whole form.
+    # Its take javascript object exactly representing
+    # our form.
+    */ 
+   this.LoginForm.setValue({})
   }
   onSubmit()
   {
