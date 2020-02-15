@@ -19,6 +19,9 @@ export class AppComponent {
   onSubmit()
   {
     console.log(this.LoginForm)
+    //Rest the form values and their states
+    this.LoginForm.reset()
+    
   }
   // onSubmit (form:NgForm){
   //   //Difrente form state using ng Form
