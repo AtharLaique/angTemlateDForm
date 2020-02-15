@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   //pet is a one option of select dropdown
   defaultPet="pet"
+  //Array of options for Radio buttons
+  gender=['Male ' , 'Female']
   //Using this we can access the form before submit 
   @ViewChild('f', {static: true}) LoginForm:NgForm;
   suggestUserName() {
