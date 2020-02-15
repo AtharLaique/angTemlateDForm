@@ -20,7 +20,14 @@ export class AppComponent {
     # Its take javascript object exactly representing
     # our form.
     */ 
-   this.LoginForm.setValue({})
+   this.LoginForm.setValue({
+     userData:{
+       username:suggestedName,
+       email:''
+     },
+     secret:'pet',
+     gender:'Male'
+   })
   }
   onSubmit()
   {
