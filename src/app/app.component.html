@@ -24,6 +24,11 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
+        <div class="radio" *ngFor="let gender of gender"> 
+          <label>
+            <input type="radio" [value]="gender"/>{{gender}}
+          </label>
+        </div> 
         <button class="btn btn-primary" type="submit" [disabled]='!f.valid'>Submit</button>
       </form>
     </div>
