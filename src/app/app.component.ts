@@ -32,7 +32,11 @@ export class AppComponent {
     # patchValue() set the value of attribute of the form.
     # Its take javascript object to over write the form value
     */
-     this.LoginForm.form.patchValue({})
+     this.LoginForm.form.patchValue({
+       userData:{
+         username:suggestedName
+       }
+     })
   }
   onSubmit()
   {
